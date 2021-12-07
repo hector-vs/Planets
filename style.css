@@ -29,6 +29,11 @@ p{
   margin: 5px; /* Faz dar margem sómente no texto */
 }
 
+a{
+  color: white;
+  text-decoration: none;
+}
+
 .FlexContainer { /* Isso tudo faz um container Flex, Responsivo, o que seria os "Cards" */
   display: flex;
   flex-wrap: wrap;
@@ -38,7 +43,7 @@ p{
   width: 100%;
   padding: 20px;
 
-  height: 80vh;
+  height: 100%;
   overflow: auto;
   flex-direction: row;
 }
