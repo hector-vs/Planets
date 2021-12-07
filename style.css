@@ -29,9 +29,50 @@ p{
   margin: 5px; /* Faz dar margem sómente no texto */
 }
 
-a{
+a{ /* Tira aquela pre-decoração que o "a" aplica*/
   color: white;
   text-decoration: none;
+}
+
+.principal{ /*Div do texto sobre nós*/
+  width: 70vw; 
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto; 
+
+  border-radius: 5px;
+
+  background-color: lavender;
+  opacity: 0.9;
+  
+}
+
+h2{
+  color: black;
+}
+
+#somos{ /*Textinho falando sobre nós*/
+  text-align: justify;
+  color: black;
+  font-weight: bold;
+
+  padding: 10px;
+}
+
+#modalbotao{ /*Botão que chama o modal*/
+  height: 60px; 
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto; 
+  text-align: center;
+
+  background-color: cadetblue;
+  color: black;
+  font-weight: bold;
+
+  border-radius: 20px;
+  padding: 5px;
+  cursor: pointer;
 }
 
 .FlexContainer { /* Isso tudo faz um container Flex, Responsivo, o que seria os "Cards" */
@@ -107,3 +148,57 @@ a{
   
   margin-left: 10px;
 }
+
+/*DAQUI PRA BAIXO É CONFIGURAÇÃO DO MODAL*/
+#bg{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, .8); 
+    position: fixed;
+    display: none;
+}
+
+#bg:target{
+    display: block;
+}
+
+#bg:target ~ .box{
+    top: 200px;
+    transition: all .3s;
+    transition-delay: .2s;
+}
+
+.box{
+    background-color: cornsilk;
+    width: 450px;
+    height: 300px;
+    position: absolute;
+    margin-left: -360px;
+    left: 60%;
+    top: -480px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#close{
+    color: #fff;
+    font-family: Arial;
+    text-decoration: none;
+    font-size: 35px;
+    position: absolute;
+    background-color: #000;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    right: 0;
+    transition: background .2s;
+}
+
+#close:hover{
+    background-color: red;
+}
+/*DAQUI PRA CIMA É CONFIGURAÇÃO DO MODAL*/
